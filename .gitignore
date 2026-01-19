@@ -1,0 +1,21 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Uploads (mantém a pasta, ignora arquivos)
+uploads/*
+!uploads/.gitkeep
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente
+.env
