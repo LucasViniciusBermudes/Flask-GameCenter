@@ -46,7 +46,7 @@ Flask-GameCenter/
 ├── views_game.py
 └── views_user.py
 ```
-⚙️ Pré-requisitos
+## ⚙️ Pré-requisitos
 Antes de começar, você precisa ter instalado:
 ```
 -Python 3.10 ou superior
@@ -54,84 +54,99 @@ Antes de começar, você precisa ter instalado:
 -(Opcional) VS Code ou outro editor de código
 ```
 Verifique a versão do Python:
+```
 python --version
+```
+---
 
-🚀 Instalação e execução
+## 🚀 Instalação e execução
 1️⃣ Clonar o repositório
 ```
 git clone https://github.com/LucasViniciusBermudes/Flask-GameCenter.git
 cd Flask-GameCenter
 ```
+---
 
 2️⃣ Criar e ativar o ambiente virtual
 ▶ Windows (PowerShell)
+```
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-
-
+```
 Se ocorrer erro de política de execução:
-
+```
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-
+```
 ▶ macOS / Linux
+```
 python3 -m venv .venv
 source .venv/bin/activate
+```
+---
 
 3️⃣ Instalar as dependências
 
 Com o ambiente virtual ativo:
-
+```
 pip install -r requirements.txt
-
-
+```
 Caso o arquivo ainda não exista:
-
+```
 pip freeze > requirements.txt
-
+```
 4️⃣ Pasta de uploads
 
 A aplicação utiliza a pasta uploads/ para armazenar arquivos enviados.
 
 Essa pasta é mantida no repositório através do arquivo .gitkeep.
 Caso não exista por algum motivo:
-
+```
 mkdir uploads
-
+```
+---
 5️⃣ Preparar o banco de dados
 
 Execute o script de criação do banco:
-
+```
 python prepara_banco.py
+```
+---
 
 6️⃣ Executar a aplicação
 ▶ Opção A — Execução direta
+```
 python jogoteca.py
-
+```
 ▶ Opção B — Flask CLI
-
 Windows (PowerShell):
-
+```
 $env:FLASK_APP="jogoteca.py"
 $env:FLASK_ENV="development"
 flask run
-
+```
 
 macOS / Linux:
-
+```
 export FLASK_APP=jogoteca.py
 export FLASK_ENV=development
 flask run
+```
+---
 
 7️⃣ Acessar no navegador
 
 Abra o navegador e acesse:
-
+```
 http://127.0.0.1:5000
+```
+---
 
-🧹 Boas práticas adotadas
+## 🧹 Boas práticas adotadas
 
 ❌ Ambiente virtual (.venv/) não é versionado
+
 ❌ Cache Python (__pycache__/) ignorado
+
 ✅ Dependências versionadas via requirements.txt
 
 ✅ Pasta uploads/ mantida com .gitkeep
@@ -140,7 +155,9 @@ http://127.0.0.1:5000
 
 ✅ Commits semânticos
 
-📌 Observações
+---
+
+## 📌 Observações
 
 Este projeto utiliza SQLite para desenvolvimento local
 
